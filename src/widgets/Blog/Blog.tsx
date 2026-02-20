@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "@/src/widgets/Blog/styles/Blog.module.scss";
 
-import { fetchPosts } from "@/src/entities/api";
+import { fetchPosts } from "@/src/entities/Post/api";
 import BlogPost from "@/src/features/BlogPost/BlogPost";
 
 async function Blog() {
