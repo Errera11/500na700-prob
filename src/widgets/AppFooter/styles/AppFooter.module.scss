@@ -1,0 +1,45 @@
+@use '@/src/app/styles/_media.scss';
+
+.appFooter {
+    background: linear-gradient(180deg, #FB8627 0%, #F5BEF6 100%);
+
+    &__content {
+        height: var(--footer-height);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        @include media.media-tablet {
+            gap: unset;
+            flex-direction: row;
+            justify-content: unset;
+        }
+    }
+
+    &__logoWrapper {
+        width: 120px;
+        height: 144px;  
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        color: var(--color-white);
+        max-width: 191px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include media.media-tablet {
+            text-align: unset;
+            margin: 0 auto;
+            max-width: unset;
+        }
+    }
+
+    
+}

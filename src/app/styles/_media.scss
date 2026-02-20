@@ -1,0 +1,8 @@
+$viewport-width-qhd: 1440px;
+$viewport-width-tablet: 768px;
+
+@mixin media-tablet {
+  @media screen and (min-width: $viewport-width-tablet) {
+    @content;
+  }
+}

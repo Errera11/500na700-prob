@@ -1,0 +1,41 @@
+@use '@/src/app/styles/_media.scss';
+
+.appHeader {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-bg-black);
+    z-index: 1;
+
+    &__content {
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 44px;
+        height: 52px;
+
+        @include media.media-tablet {
+            width: auto;
+            height: auto;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: var(--color-white);
+        opacity: 0.3;
+        bottom: 0;
+    } 
+}

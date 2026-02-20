@@ -1,0 +1,14 @@
+@use "./_fonts.scss";
+@use "./_media.scss";
+@use "./_colors.scss";
+@use "./_layouts.scss";
+@use "./_vars.scss";
+
+:root {
+  font-family: "Inter", sans-serif;
+  @include fonts.font-style-regular;
+}
+
+body {
+  background-color: var(--color-bg-black);
+}

@@ -1,0 +1,13 @@
+@use "./_media.scss";
+
+:root {
+  --header-height: 83px;
+  --footer-height: 431px;
+  --post-height: 374px;
+
+  @include media.media-tablet {
+    --header-height: 119px;
+    --footer-height: 248px;
+    --post-height: 460px;
+  }
+}

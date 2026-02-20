@@ -1,0 +1,11 @@
+@use "./media";
+
+.default-layout {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: media.$viewport-width-qhd;
+
+  @include media.media-tablet {
+    padding: 0 40px;
+  }
+}

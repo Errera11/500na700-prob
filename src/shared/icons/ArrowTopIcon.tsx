@@ -1,0 +1,33 @@
+function ArrowTopIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12.9325 4.93213V12.7961H11.4325L11.4325 7.49279L5.2882 13.6371L4.22754 12.5764L10.3718 6.43213L5.06853 6.43213L5.06853 4.93213H12.9325Z"
+        fill="url(#paint0_linear_5402_221)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_5402_221"
+          x1="8.58001"
+          y1="4.93213"
+          x2="8.58001"
+          y2="13.6371"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FB8627" />
+          <stop offset="1" stopColor="#F5BEF6" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+export default ArrowTopIcon;

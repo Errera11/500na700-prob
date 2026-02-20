@@ -1,0 +1,58 @@
+.appButton {
+    transition: all 0.2s;
+    display: block;
+    color: var(--color-white);
+    border: 1px solid transparent;
+    border-radius: 40px;
+    padding: 12px 20px;
+    text-align: center;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    border: none;
+    outline: none;
+    
+    &:hover {
+        background: linear-gradient(180deg, #FB8627 0%, #F5BEF6 100%);
+
+        &::before {
+            opacity: 0;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(180deg, #FB8627 0%, #F5BEF6 100%);
+        mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: destination-out;
+    }
+
+    &_dark {
+        color: var(--color-black);
+    }
+
+
+    &_default {
+        border: unset;
+        padding: unset;
+        
+        &::before {
+            content: unset;
+        }
+        
+        &:hover {
+            background: unset;
+        }
+    }
+}

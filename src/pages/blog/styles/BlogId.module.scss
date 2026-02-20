@@ -1,0 +1,55 @@
+@use '@/src/app/styles/_media.scss';
+
+
+.blogId {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    @include media.media-tablet {
+        padding-top: 78px;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 232px;
+        position: relative;
+
+        @include media.media-tablet {
+            width: 440px;
+            height: 320px;
+        }
+    }
+
+    &__textContent {
+        margin-top: 20px;
+
+        @include media.media-tablet {
+            margin-top: 0;
+        }
+    }
+
+    &__textMain {}
+
+    &__date {
+        margin-top: 20px;
+        opacity: 0.5;
+    }
+
+    &__title, &__date, &__description {
+        display: block;
+        color: var(--color-white) !important;
+    }
+
+    &__description {
+        margin-top: 30px;
+
+        @include media.media-tablet {
+            margin-top: 40px;
+            max-width: 440px;
+        }
+    }
+}

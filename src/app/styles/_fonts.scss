@@ -1,0 +1,99 @@
+@use "./_colors.scss";
+@use "./_media.scss";
+
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter_28pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter_24pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin font-style-regular {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+@mixin font-style-medium {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--color-black);
+}
+
+@mixin font-style-semibold {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color-black);
+}
+
+
+@mixin font-h1 {
+  @include font-h2;
+
+  @include media.media-tablet {
+    @include font-style-semibold;
+    font-size: 40px;
+  }
+}
+
+@mixin font-h2 {
+  @include font-h3;
+
+  @include media.media-tablet {
+    @include font-style-semibold;
+    font-size: 24px;
+  }
+}
+
+@mixin font-h3 {
+  @include font-style-semibold;
+  font-size: 20px;
+}
+
+@mixin font-h4 {
+  @include font-style-semibold;
+  font-size: 16px;
+}
+
+@mixin font-link {
+  @include font-style-medium;
+}
+
+:root {
+  :where(h1) {
+    @include font-h1;
+  }
+
+  :where(h2) {
+    @include font-h2;
+  }
+
+  :where(h3) {
+    @include font-h3;
+  }
+
+  :where(h4) {
+    @include font-h4;
+  }
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

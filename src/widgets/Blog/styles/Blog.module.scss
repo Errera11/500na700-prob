@@ -1,0 +1,26 @@
+@use '@/src/app/styles/_media.scss';
+
+.blog {
+
+    &__postWrapper {
+        grid-column: span 2;
+    }
+
+    &__title {
+        color: var(--color-white) !important;
+        padding: 40px 0 30px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 48px;
+        justify-content: center;
+
+        @include media.media-tablet {
+            grid-template-columns: repeat(6, minmax(0, 210px));
+            gap: 20px;
+            padding: 0 40px;
+        }
+    }
+}

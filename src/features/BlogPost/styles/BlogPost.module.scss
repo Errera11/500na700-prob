@@ -1,0 +1,60 @@
+@use '@/src/app/styles/_media.scss';
+@use '@/src/app/styles/_fonts.scss';
+
+.blogPost {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: var(--post-height);
+
+
+    &__img {
+        height: 218px;
+        position: relative;
+        flex: 1 1 100%;
+        overflow: hidden;
+        border-radius: 0px;
+    transition: border-radius 0.1s ease-in-out;
+
+    }
+
+    &__textContent {
+        padding: 0 20px 0 10px;
+        display: flex;
+        flex-direction: column;
+
+        @include media.media-tablet {
+            padding: 0;
+        }
+    }
+
+    &__title, &__description, &__date {
+        color: var(--color-white);
+        transition: all 0.1s ease-in-out;
+    }
+
+    &__description {
+        margin-top: 10px;
+        opacity: 0.5;
+        max-height: 63px;
+        display: block;
+
+        @include fonts.ellipsis;
+    }
+
+    &__date {
+        margin-top: 20px;
+    }
+
+    &:hover {
+        .blogPost__img {
+            border-radius: 20px;
+        }    
+
+        .blogPost__title {
+            background-image: linear-gradient(180deg, #FB8627 0%, #F5BEF6 100%) !important;
+            color: transparent;
+            background-clip: text;
+        }
+    }
+}
